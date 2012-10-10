@@ -1,0 +1,39 @@
+<div class="censusTitle" header-title="City Details"></div>
+
+<div class="content">
+    <div class="details">
+        <h3>{{ city.name }}</h3>
+        Area: {{ city.area | number }} square miles
+    </div>
+    
+    <ul data-role="listview" data-inset="true" class="action-list">
+        <li><a id="city-populations" href="#/state/{{ city.stateCode }}/county/{{ city.countyCode }}/city/{{ city.code }}/section/censuses">
+        		<h3>Census Populations</h3>
+        	</a>
+        </li>
+    </ul>
+
+	<div id="census" data-role="content"></div>
+    
+    <ul data-role="listview" data-inset="true" class="action-list">
+        <li>
+        	<a id="city-cities" href="#/state/{{ city.stateCode }}/county/{{ city.countyCode }}">
+        		<h3>
+        			<span class="value">{{ city.countyName }}</span>
+        			<span class="label">County</span>
+        		</h3>
+        	</a>
+        </li>
+        <li>
+        	<a id="city-state" href="#/state/{{ city.stateCode }}">
+        		<h3>
+        			<span class="value">{{ city.stateName }}</span>
+        			<span class="label">State</span>
+        		</h3>
+        	</a>
+        </li>
+    </ul>
+    
+   	<div id="map" style="width: 100%;"></div>
+    
+</div>

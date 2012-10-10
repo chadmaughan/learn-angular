@@ -1,0 +1,9 @@
+<div class="content">
+	<ul>
+		<li ng-repeat="county in counties">
+            <a href="#/state/{{ county.stateCode }}/county/{{ county.code }}">
+    			<h3>{{county.name}}</h3>
+            </a>
+		</li>
+	</ul>
+</div>

@@ -1,0 +1,232 @@
+.state-flag {
+	float: right;
+	height: 80px;
+	padding-right: 5px;
+	padding-bottom: 15px;
+	padding-top: 15px;
+}
+
+.state-seal {
+	float: right;
+	height: 80px;
+	padding-right: 5px;
+	padding-bottom: 15px;
+	padding-top: 15px;
+	padding-right: 15px;
+}
+
+#id {
+	text-align: center;	
+}
+
+.footer {
+	margin-top: 20px;
+}
+
+div.about li {
+	line-height: 1.4em;	
+}
+
+div.about p {
+	line-height: 1.2em;	
+}
+
+.locale {
+	float: right;
+	padding-top: 10px;
+}
+.details {
+	padding-left: 15px;
+	padding-top: 10px;
+}
+
+.details h2 {
+	padding-bottom: 0px;
+	margin-bottom: 10px;
+}
+
+.action-list {
+	clear: both;
+}
+
+span.value {
+	float: right;
+	padding-right: 20px;
+}
+
+#censusTable {
+	width: 100%;
+	padding: 10px;
+	box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+}
+
+#censusTable td {
+	text-align: right;
+	padding-right: 20px;
+	padding-top: 8px;
+	background-color: #fff;
+}
+
+#censusTable th {
+	text-align: right;
+	padding-right: 20px;
+	border-bottom: 1px solid #666666;
+}
+
+.nodisplay {
+	visibility: hidden;
+	display: none;
+}
+
+.messageList li {
+	list-style: none;
+}
+
+.padding {
+	margin-left: -7px;
+	margin-right: -7px;
+}
+
+.ui-collapsible {
+    margin: 1em 0;
+}
+
+.ui-content {
+    border-width: 0;
+    overflow-x: hidden;
+    overflow-y: visible;
+    padding: 15px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+.ui-li-has-count .ui-li-count {
+    font-size: 11px;
+    font-weight: bold;
+    margin-top: -0.9em;
+    padding: 0.2em 0.5em;
+    position: absolute;
+    right: 60px;
+    top: 50%;
+}
+
+.ui-collapsible-heading a {
+    margin: 0;
+    padding: 0.6em 15px 0.6em 5px;
+    text-align: left;
+}
+
+.ui-collapsible {
+    margin: 0;
+}
+
+.ui-focus, .ui-btn:focus {
+    box-shadow: none;
+}
+
+.ui-shadow {
+    box-shadow: none;
+}
+
+.ui-select .ui-btn-text {
+    text-overflow: ellipsis;
+    text-align: left;
+}
+
+div.errors li span {
+	font-weight: normal;
+	padding-left: 20px;
+	display: block;
+}
+a {
+    color: #222;
+    text-decoration: none;
+}
+ul li {
+    background-image: -ms-linear-gradient(top, #FFFFFF 0%, #F1F1F1 100%);
+    background-image: -moz-linear-gradient(top, #FFFFFF 0%, #F1F1F1 100%);
+    background-image: -webkit-gradient(linear, top, bottom, color-stop(0, #FFFFFF), color-stop(1, #F1F1F1));
+    background-image: -webkit-linear-gradient(top, #FFFFFF 0%, #F1F1F1 100%);
+    border: 1px solid #CCC;
+    border-radius: 10px;
+    color: #222;
+    cursor: pointer;
+    display: block;
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: bold;
+    height: 60px;
+    list-style-image: none;
+    list-style-position: outside;
+    list-style-type: none;
+    text-align: left;
+    text-decoration: none;
+    text-shadow: white 0px 1px 0px;
+}
+
+ul li:hover {
+    background-image: -ms-linear-gradient(top, #F9F9F9 0%, #E0E0E0 100%);
+    background-image: -moz-linear-gradient(top, #F9F9F9 0%, #E0E0E0 100%);
+    background-image: -webkit-gradient(linear, top, bottom, color-stop(0, #F9F9F9), color-stop(1, #E0E0E0));
+    background-image: -webkit-linear-gradient(top, #F9F9F9 0%, #E0E0E0 100%);
+}
+
+ul {
+    padding-left: 0;
+}
+
+a > h3 {
+    padding-left: 20px;
+}
+
+span.count {
+    float: right;
+    padding-right: 20px;
+}
+
+body {
+    background: #F3F3F3;
+    font-family: sans-serif;
+    padding: 0px;
+    margin: 0px;
+}
+
+div.header {
+    background: #666;
+    display: block;
+}
+
+div.header > a.button {
+    float: left;
+    position: absolute;
+    left: 20px;
+    top: 10px;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 5px;
+    min-width: 50px;
+    text-align: center;
+    background: black;
+    color: #CCC;
+}
+
+div.header > a.back {
+    left: 20px;
+    top: 10px;
+}
+
+div.header > a.home {
+    left: 95px;
+    top: 10px;
+}
+
+div.header > h1 {
+    text-align: center;
+    color: #FFF;
+    font-size: 1.5em;
+    padding: 10px;
+    margin: 0px;
+}
+
+div.content {
+    padding: 20px;
+}

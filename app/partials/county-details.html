@@ -1,0 +1,42 @@
+<div class="header">
+    <a href="#" class="back button">Back</a>
+    <a href="#" class="home button">Home</a>
+    <h1>County Details</h1>
+</div>
+
+<div class="content">
+    <div class="details">
+        <h3>{{ county.name }}</h3>
+        Area: {{ county.area | number }} square miles
+    </div>
+    
+    <ul>
+        <li>
+        	<a id="county-populations" href="#/state/{{ county.stateCode }}/county/{{ county.code }}/section/censuses"><h3>Census Populations</h3></a>
+        </li>
+    </ul>
+    
+    <div id="census" data-role="content"></div>
+    
+    <ul>
+        <li>
+        	<a id="county-cities" href="#/state/{{ county.stateCode }}/county/{{ county.code }}/list/cities">
+                <h3>
+                    <span class="value">{{ county.cityCount }}</span>
+                    <span class="label">Cities</span>
+                </h3>
+        	</a>
+        </li>
+    </ul>
+
+    <ul>
+        <li>
+        	<a id="county-state" href="#/state/{{ county.stateCode }}">
+        		<h3>
+        			<span class="value">{{ county.stateName }}</span>
+        			<span class="label">State</span>
+        		</h3>
+        	</a>
+        </li>
+    </ul>
+</div>
