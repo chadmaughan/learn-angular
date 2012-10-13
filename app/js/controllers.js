@@ -106,3 +106,13 @@ function CityCtrl($scope, $http, $routeParams, googleCityMap) {
     );
 }
 CityCtrl.$inject = ['$scope','$http','$routeParams', 'googleCityMap'];
+
+function CensusCtrl($scope, $http, $routeParams) {
+    $http.get('/app/api/state/' + $routeParams.stateCode + '/censuses.json').success(
+        function(data, status, headers, config) {
+            console.log(data.censuses);
+            $scope.censuses = data.censuses;
+        }
+    );
+}
+CensusCtrl.$inject = ['$scope','$http','$routeParams'];

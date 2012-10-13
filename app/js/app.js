@@ -20,4 +20,7 @@ angular.module('censusApp', ['censusApp.filters', 'censusApp.services', 'censusA
         // city views
         $routeProvider.when('/state/:stateCode/county/:countyCode/city/:cityCode', {templateUrl:'partials/city-details.html', controller:CityCtrl});
 
+        // census view
+        $routeProvider.when('/state/:stateCode/section/censuses', {templateUrl:'partials/censuses.html', controller:CensusCtrl});
+
 }]);
