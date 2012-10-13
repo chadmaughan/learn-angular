@@ -1,6 +1,8 @@
-{"name": "learn-angular",
-"version": "1.0.0",
-"dependencies": {
-  "express": "3.0.0rc5",
-  "sqlite3": "2.1.5"
-}}
+{
+    "dependencies": {
+        "express": "3.0.0rc5", 
+        "sqlite3": "2.1.5"
+    }, 
+    "name": "learn-angular", 
+    "version": "1.0.0"
+}
