@@ -1,6 +1,9 @@
 <div class="header">
     <a href="#" class="back button">Back</a>
-    <a href="#" class="home button">Home</a>
+    <a href="#" class="home button">
+        <i class="icon-home"></i>
+        Home
+    </a>
     <h1>State Details</h1>
 </div>
 
@@ -14,7 +17,11 @@
 
     <ul class="action-list">
         <li>
-        	<a id="state-populations" href="#/state/{{ state.code }}/section/censuses"><h3>Census Populations</h3></a>
+        	<a id="state-populations" href="#/state/{{ state.code }}/section/censuses">
+                <h3>Census Populations
+                    <i class="icon-chevron-right"></i>
+                </h3>
+            </a>
         </li>
 	</ul>
 	
@@ -26,6 +33,7 @@
         		<h3>
                     <span class="value">{{ state.countyCount }}</span>
                     <span class="label">Counties</span>
+                    <i class="icon-chevron-right"></i>
                 </h3>
         	</a>
         </li>
@@ -34,6 +42,7 @@
 	        	<h3>
                     <span class="value">{{ state.cityCount }}</span>
                     <span class="label">Cities</span>
+                    <i class="icon-chevron-right"></i>
                 </h3>
 	        </a>
 	    </li>

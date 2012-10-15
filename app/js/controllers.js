@@ -5,9 +5,9 @@
 function StateListCtrl($scope, $http) {
 	console.log('statelistctrl');
 
-    $http({method: 'GET', url: '/app/api/states.json', cache: true}).
+    $http({method: 'GET', url: '/api/states', cache: true}).
 	    success(function(data, status, headers, config) {
-			$scope.states = data.units;
+			$scope.states = data;
 		    // this callback will be called asynchronously
 		    // when the response is available
 	    }).
@@ -30,7 +30,7 @@ StateListCtrl.$inject = ['$scope', '$http'];
 
 function StateCtrl($scope, $http, $routeParams, googleStateMap) {
     console.log('stateCtrl: ' + $routeParams.stateCode);
-    $http.get('/app/api/state/' + $routeParams.stateCode + '.json').success(
+    $http.get('/api/state/' + $routeParams.stateCode).success(
 
         function(data, status, headers, config) {
 
@@ -51,7 +51,7 @@ function CountyCtrl($scope, $http, $routeParams) {
     console.log('countyCtrl: ' + url);
 
     // get the county data
-    $http.get('/app/api/' + url + '.json').success(
+    $http.get('/api/' + url).success(
         function(data, status, headers, config) {
 
             // set the scope data
@@ -63,18 +63,18 @@ function CountyCtrl($scope, $http, $routeParams) {
 CountyCtrl.$inject = ['$scope','$http','$routeParams'];
 
 function CountyListCtrl($scope, $http, $routeParams) {
-    $http.get('/app/api/state/' + $routeParams.stateCode + '/counties.json').success(
+    $http.get('/api/state/' + $routeParams.stateCode + '/counties').success(
         function(data, status, headers, config) {
-            $scope.counties = data.units;
+            $scope.counties = data;
         }
     );
 }
 CountyListCtrl.$inject = ['$scope','$http','$routeParams'];
 
 function CityListCtrl($scope, $http, $routeParams) {
-    $http.get('/app/api/state/' + $routeParams.stateCode + '/cities.json').success(
+    $http.get('/api/state/' + $routeParams.stateCode + '/cities').success(
         function(data, status, headers, config) {
-            $scope.cities = data.units;
+            $scope.cities = data;
         }
     );
 }
@@ -87,31 +87,33 @@ function CityCtrl($scope, $http, $routeParams, googleCityMap) {
     console.log('cityCtrl: ' + url);
 
     // get the city data
-    $http.get('/app/api/' + url + '.json').success(
+    $http.get('/api/' + url).success(
         function(data, status, headers, config) {
 
             // set the scope data
+            console.log(data);
+
             $scope.city = data;
 
             // add the google visualization map (expects div w/ id=map to exist)
-            googleCityMap($scope.city.name, $scope.city.stateAbbreviation, document.getElementById('map'))
+            googleCityMap($scope.city.name, $scope.city.state_abbreviation, document.getElementById('map'))
 
             // get the tweets about the city
-            $http.jsonp('http://search.twitter.com/search.json?q=' + $scope.city.name).success(
-                function(data, status, headers, config) {
-                    console.log(data);
-                }
-            );
+//            $http.jsonp('http://search.twitter.com/search.json?q=' + $scope.city.name).success(
+//                function(data, status, headers, config) {
+//                    console.log(data);
+//                }
+//            );
         }
     );
 }
 CityCtrl.$inject = ['$scope','$http','$routeParams', 'googleCityMap'];
 
 function CensusCtrl($scope, $http, $routeParams) {
-    $http.get('/app/api/state/' + $routeParams.stateCode + '/censuses.json').success(
+    $http.get('/api/state/' + $routeParams.stateCode + '/censuses').success(
         function(data, status, headers, config) {
-            console.log(data.censuses);
-            $scope.censuses = data.censuses;
+            console.log(data);
+            $scope.censuses = data;
         }
     );
 }

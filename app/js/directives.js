@@ -4,11 +4,13 @@
 
 
 angular.module('censusApp.directives', []).
+
     directive('appVersion', ['version', function (version) {
-        return function (scope, elm, attrs) {
-            elm.text(version);
+        return function (scope, element, attrs) {
+            element.text(version);
         };
     }])
+
     .directive('censusHeader', function() {
         console.log('creating');
         return {
@@ -28,6 +30,8 @@ angular.module('censusApp.directives', []).
 
             // The linking function will add behavior to the template
             link: function(scope, element, attrs) {
+
+                console.log('link: ' + element);
 
                 // Title element
                 var title = angular.element(element.children()[0]);

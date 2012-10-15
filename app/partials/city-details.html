@@ -1,14 +1,16 @@
-<census-title header-title="City Details"></census-title>
+<census-header header-title="City Details"></census-header>
 
 <div class="content">
     <div class="details">
         <h3>{{ city.name }}</h3>
         Area: {{ city.area | number }} square miles
     </div>
-    
+
     <ul data-role="listview" data-inset="true" class="action-list">
-        <li><a id="city-populations" href="#/state/{{ city.stateCode }}/county/{{ city.countyCode }}/city/{{ city.code }}/section/censuses">
-        		<h3>Census Populations</h3>
+        <li><a id="city-populations" href="#/state/{{ city.state_code }}/county/{{ city.county_code }}/city/{{ city.code }}/section/censuses">
+        		<h3>Census Populations
+                    <i class="icon-chevron-right"></i>
+                </h3>
         	</a>
         </li>
     </ul>
@@ -17,19 +19,21 @@
     
     <ul data-role="listview" data-inset="true" class="action-list">
         <li>
-        	<a id="city-cities" href="#/state/{{ city.stateCode }}/county/{{ city.countyCode }}">
+        	<a id="city-cities" href="#/state/{{ city.state_code }}/county/{{ city.county_code }}">
         		<h3>
-        			<span class="value">{{ city.countyName }}</span>
+                    <i class="icon-chevron-right"></i>
+        			<span class="value">{{ city.county_name }}</span>
         			<span class="label">County</span>
         		</h3>
         	</a>
         </li>
         <li>
-        	<a id="city-state" href="#/state/{{ city.stateCode }}">
+        	<a id="city-state" href="#/state/{{ city.state_code }}">
         		<h3>
-        			<span class="value">{{ city.stateName }}</span>
+                    <i class="icon-chevron-right"></i>
+        			<span class="value">{{ city.state_name }}</span>
         			<span class="label">State</span>
-        		</h3>
+                </h3>
         	</a>
         </li>
     </ul>

@@ -148,7 +148,6 @@ ul li {
     background-image: -webkit-gradient(linear, top, bottom, color-stop(0, #FFFFFF), color-stop(1, #F1F1F1));
     background-image: -webkit-linear-gradient(top, #FFFFFF 0%, #F1F1F1 100%);
     border: 1px solid #CCC;
-    border-radius: 10px;
     color: #222;
     cursor: pointer;
     display: block;
@@ -229,4 +228,24 @@ div.header > h1 {
 
 div.content {
     padding: 20px;
+}
+
+ul li:nth-child(1) {
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+}
+
+ul li:nth-last-child(1) {
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+li {
+    list-style: none;
+    display: block;
+}
+
+h3 > i {
+    float: right;
+    padding-right: 20px;
 }
