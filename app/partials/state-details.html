@@ -1,15 +1,10 @@
-<div class="header">
-    <a href="#" class="back button">Back</a>
-    <a href="#" class="home button">
-        <i class="icon-home"></i>
-        Home
-    </a>
-    <h1>State Details</h1>
-</div>
+<census-header header-title="State Details"></census-header>
 
 <div class="content">
-    <img src="images/flags/{{ state.code }}.png" class="state-flag"/>
-    <img src="images/seals/{{ state.code }}.png" class="state-seal"/>
+
+    <img ng-src="images/flags/{{state.code}}.png" class="state-flag"/>
+    <img src="{{ state.imageSeal }}" class="state-seal"/>
+
     <div class="details">
         <h2>{{ state.name }}</h2>
         Area: {{ state.area | number }} square miles

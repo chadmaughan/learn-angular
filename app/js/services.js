@@ -50,5 +50,15 @@ angular.module('censusApp.services', [], function ($provide) {
         };
     });
 
+    $provide.factory('twitter', ['$http', function(http) {
+        return function(term) {
+            // get the tweets about the city
+            http.jsonp('http://search.twitter.com/search.json?q=' + term).success(
+                function(data, status, headers, config) {
+                    console.log(data);
+                }
+            );
+        };
+    }]);
 }).
 value('version', '0.1');

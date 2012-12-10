@@ -1,18 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="231b5a00-2c03-4762-9eec-ea363be209b2" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/app.css" afterPath="$PROJECT_DIR$/css/app.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/styles.css" afterPath="$PROJECT_DIR$/css/styles.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/controllers.js" afterPath="$PROJECT_DIR$/js/controllers.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/directives.js" afterPath="$PROJECT_DIR$/js/directives.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/partials/city-details.html" afterPath="$PROJECT_DIR$/partials/city-details.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/partials/city-list.html" afterPath="$PROJECT_DIR$/partials/city-list.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/partials/state-details.html" afterPath="$PROJECT_DIR$/partials/state-details.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/partials/state-list.html" afterPath="$PROJECT_DIR$/partials/state-list.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scripts/app.js" afterPath="$PROJECT_DIR$/../scripts/app.js" />
-    </list>
+    <list default="true" id="231b5a00-2c03-4762-9eec-ea363be209b2" name="Default" comment="" />
     <ignored path="app.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="TRACKING_ENABLED" value="true" />

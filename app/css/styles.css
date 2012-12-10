@@ -194,7 +194,7 @@ div.header {
     display: block;
 }
 
-div.header > a.button {
+div.header > a.button, div.header > span.button {
     float: left;
     position: absolute;
     left: 20px;
@@ -248,4 +248,8 @@ li {
 h3 > i {
     float: right;
     padding-right: 20px;
+}
+
+div.version {
+    padding-left: 40px;
 }

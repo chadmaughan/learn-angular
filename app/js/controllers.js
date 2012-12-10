@@ -24,7 +24,7 @@ function StateListCtrl($scope, $http) {
 	//	$http.get('/someUrl').success(successCallback);
 }
 
-// useful for minification (when minified, funciton arguments above
+// useful for minification (when mini-fied, function arguments above
 //	are changed preventing dependency injection from working - this is one way to get around it)
 StateListCtrl.$inject = ['$scope', '$http'];
 
@@ -36,6 +36,10 @@ function StateCtrl($scope, $http, $routeParams, googleStateMap) {
 
             // set the scope data
             $scope.state = data;
+
+            // create the images
+            $scope.state.imageFlag = "images/flags/" + $scope.state.code + ".png";
+            $scope.state.imageSeal = "images/seals/" + $scope.state.code + ".png";
 
             // draw the map
             googleStateMap($scope.state.name, document.getElementById('map'));
@@ -81,7 +85,7 @@ function CityListCtrl($scope, $http, $routeParams) {
 CityListCtrl.$inject = ['$scope','$http','$routeParams'];
 
 // city controller - gets data and populates city partial
-function CityCtrl($scope, $http, $routeParams, googleCityMap) {
+function CityCtrl($scope, $http, $routeParams, googleCityMap, twitter) {
 
     var url = 'state/' + $routeParams.stateCode + '/county/' + $routeParams.countyCode + '/city/' + $routeParams.cityCode;
     console.log('cityCtrl: ' + url);
@@ -98,12 +102,7 @@ function CityCtrl($scope, $http, $routeParams, googleCityMap) {
             // add the google visualization map (expects div w/ id=map to exist)
             googleCityMap($scope.city.name, $scope.city.state_abbreviation, document.getElementById('map'))
 
-            // get the tweets about the city
-//            $http.jsonp('http://search.twitter.com/search.json?q=' + $scope.city.name).success(
-//                function(data, status, headers, config) {
-//                    console.log(data);
-//                }
-//            );
+            twitter($scope.city.name);
         }
     );
 }
