@@ -1,0 +1,25 @@
+{
+  "name": "learn-angular",
+  "version": "0.0.0",
+  "description": "AngularJS Workshop Sample Application",
+  "main": "scripts/app.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "sqlite3": "2.1.5",
+    "express": "3.0.3"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/chadmaughan/learn-angular.git"
+  },
+  "keywords": [
+    "AngularJS",
+    "express",
+    "sqlite"
+  ],
+  "author": "Chad Maughan",
+  "license": "BSD"
+}
