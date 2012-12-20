@@ -1,7 +1,7 @@
 learn-angular
 =============
 
-Utah GDG workshop on getting started with AngularJS taught on October 17, 2012
+Utah GDG workshop on getting started with AngularJS.  Taught on October 17, 2012.
 
 Install node: http://nodejs.org/
 
