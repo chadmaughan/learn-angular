@@ -22,5 +22,7 @@ angular.module('censusApp', ['censusApp.filters', 'censusApp.services', 'censusA
 
         // census view
         $routeProvider.when('/state/:stateCode/section/censuses', {templateUrl:'partials/censuses.html', controller:CensusCtrl});
-
-}]);
+    }])
+//    .config(['$locationProvider', function($locationProvider) {
+//        $locationProvider.html5Mode(true).hashPrefix("!");
+//    }]);
